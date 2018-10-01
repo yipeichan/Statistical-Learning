@@ -13,7 +13,7 @@ summary(fit)
 # Roughly speaking, we have about 10-20 repeats of every data point, so the sample size is in effect much smaller than the number of rows (1000 in this case).
 matplot(Xy,type="l")
 
-#Q3 Now, use the (standard) bootstrap to estimate s.e.(??_1). To within 10%, what do you get?
+#Q3 Now, use the (standard) bootstrap to estimate s.e.(Beta_1). To within 10%, what do you get?
 #Ans 0.02753709
 set.seed(1)
 dim(Xy)
@@ -26,7 +26,7 @@ boot.out=boot(Xy,error.fn,R=1000)
 boot.out
 plot(boot.out)
 
-#Q4 Finally, use the block bootstrap to estimate s.e.(??_1). Use blocks of 
+#Q4 Finally, use the block bootstrap to estimate s.e.(Beta_1). Use blocks of 
 # 100 contiguous observations, and resample ten whole blocks with replacement
 # then paste them together to construct each bootstrap time series. 
 #To within 10%, what do you get?
