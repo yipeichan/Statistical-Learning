@@ -8,15 +8,15 @@ Ch2 Statistical Learning
 
 Ch3 Linear Regression 
 
-Ch4 Classification
-  -- Logistic regression
-  -- Linear Discriminant Analysis
-  -- K-Nearest Neighbors
+Ch4 Classification \\
+  -- Logistic regression \\
+  -- Linear Discriminant Analysis \\
+  -- K-Nearest Neighbors \\
 
-Ch5 Resampling
-  -- LOOCV, Leave-One-Out Cross Calidation
-  -- K-fold Cross Validation
-  -- Bootstrap
+Ch5 Resampling \\
+  -- LOOCV, Leave-One-Out Cross Calidation \\
+  -- K-fold Cross Validation\\
+  -- Bootstrap\\
 
 Ch6 Model Selection
 
