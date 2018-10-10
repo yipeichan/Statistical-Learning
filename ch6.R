@@ -95,7 +95,7 @@ library('glmnet')
 x=model.matrix(Salary~.-1,data=Hitters) 
 y=Hitters$Salary
 
-#Now we fit a lasso model; for this we use the default `alpha=1`
+#fit a lasso model; for this we use the default `alpha=1`
 
 fit.lasso=glmnet(x,y)
 plot(fit.lasso,xvar="lambda",label=TRUE) # the ridge regression model does not select subset variables; #of vars=20 ; Lasso select subsets: the # of variables chosen is on the top of the image
