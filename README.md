@@ -19,6 +19,9 @@ Ch5 Resampling <br>
   -- Bootstrap <br>
 
 Ch6 Model Selection
+  -- Best Subset Selection <br>
+  -- Backward/Forward Stepwise Selection <br>
+  -- Ridge Regression and the Lasso <br>
 
 Ch7 Nonlinear 
 
