@@ -57,3 +57,63 @@ for(i in 1:19){
 # I added bracket{} to make chunks; 
 # otherwise the code won't work, showing: Error in plot.xy(xy.coords(x, y), type = type, ...) : plot.new has not been called yet
 
+# for the validation error.
+# This was a little tedious - not having a predict method for `regsubsets`. So we will write one!
+
+predict.regsubsets=function(object,newdata,id,...){
+  form=as.formula(object$call[[2]])
+  mat=model.matrix(form,newdata)
+  coefi=coef(object,id=id)
+  mat[,names(coefi)]%*%coefi
+}
+
+#Model Selection by Cross-Validation
+# do 10-fold cross-validation. Its really easy!
+summary(Hitters)
+ncol(Hitters)
+nrow(Hitters)
+set.seed(11)
+folds=sample(rep(1:10,length=nrow(Hitters)))
+folds
+table(folds)
+cv.errors=matrix(NA,10,19)
+for(k in 1:10){
+  best.fit=regsubsets(Salary~.,data=Hitters[folds!=k,],nvmax=19,method="forward")
+  for(i in 1:19){
+    pred=predict(best.fit,Hitters[folds==k,],id=i)
+    cv.errors[k,i]=mean( (Hitters$Salary[folds==k]-pred)^2)
+  }
+}
+rmse.cv=sqrt(apply(cv.errors,2,mean))
+plot(rmse.cv,pch=19,type="b")
+
+
+#####  Ridge Regression and the Lasso
+# use the package `glmnet`, which does not use the model formula language, so we will set up an `x` and `y`.
+install.packages('glmnet')
+library('glmnet')
+x=model.matrix(Salary~.-1,data=Hitters) 
+y=Hitters$Salary
+
+#Now we fit a lasso model; for this we use the default `alpha=1`
+
+fit.lasso=glmnet(x,y)
+plot(fit.lasso,xvar="lambda",label=TRUE) # the ridge regression model does not select subset variables; #of vars=20 ; Lasso select subsets: the # of variables chosen is on the top of the image
+cv.lasso=cv.glmnet(x,y) # lasso with cross validation
+cv.lasso
+plot(cv.lasso)
+coef(cv.lasso)
+
+# Suppose we want to use our earlier train/validation division to select the `lambda` for the lasso.
+# This is easy to do.
+lasso.tr=glmnet(x[train,],y[train])
+lasso.tr
+pred=predict(lasso.tr,x[-train,])
+dim(pred)
+rmse= sqrt(apply((y[-train]-pred)^2,2,mean))
+plot(log(lasso.tr$lambda),rmse,type="b",xlab="Log(lambda)")
+lam.best=lasso.tr$lambda[order(rmse)[1]]
+lam.best
+coef(lasso.tr,s=lam.best)
+
+
