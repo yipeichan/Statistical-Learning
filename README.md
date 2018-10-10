@@ -20,4 +20,4 @@ Ch8 Trees
 
 Ch9 SVM 
 
-Ch10 Unsupervised
+Ch10 Unsupervised Learning
