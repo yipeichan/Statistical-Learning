@@ -18,7 +18,7 @@ Ch5 Resampling <br>
   -- K-fold Cross Validation <br>
   -- Bootstrap <br>
 
-Ch6 Model Selection
+Ch6 Model Selection <br>
   -- Best Subset Selection <br>
   -- Backward/Forward Stepwise Selection <br>
   -- Ridge Regression and the Lasso <br>
