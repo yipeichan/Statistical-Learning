@@ -1,6 +1,6 @@
 # Statistical_Learning_Practice
 
-This repository stores R code scripts of the homeworks as well as learning notes of the Statistical Learning Course
+This repository stores R code scripts of the homework and learning notes of the Statistical Learning Course
 
 Ch1 Introduction
 
