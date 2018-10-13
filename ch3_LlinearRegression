@@ -1,5 +1,5 @@
-library(MASS)
-library(ISLR)
+library('MASS')
+library('ISLR')
 ### Simple linear regression
 names(Boston)
 ?Boston
