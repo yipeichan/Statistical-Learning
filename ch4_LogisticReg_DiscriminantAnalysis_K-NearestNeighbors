@@ -1,4 +1,5 @@
-require(ISLR)
+install.packages('ISLR')
+require('ISLR')
 names(Smarket)
 summary(Smarket)
 ?Smarket
