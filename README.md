@@ -14,7 +14,7 @@ Ch4 Classification <br>
   -- K-Nearest Neighbors <br>
 
 Ch5 Resampling <br>
-  -- LOOCV, Leave-One-Out Cross Calidation <br>
+  -- LOOCV, Leave-One-Out Cross Validation <br>
   -- K-fold Cross Validation <br>
   -- Bootstrap <br>
 
