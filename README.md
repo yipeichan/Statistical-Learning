@@ -23,24 +23,24 @@ Ch6 Model Selection <br>
   -- Backward/Forward Stepwise Selection <br>
   -- Ridge Regression and the Lasso <br>
 
-Ch7 Nonlinear 
+Ch7 Nonlinear <br>
   -- Polynomials and Step Functions <br>
   -- Piecewise-Polynomials and Splines <br>
   -- Generalized Additive Models and Local Regression <br>
   -- Nonlinear Functions <br>
 
-Ch8 Trees
+Ch8 Trees<br>
   -- Tree-based methods <br>
   -- Classification Trees <br>
   -- Bagging and Random Forests <br>
   -- Boosting <br>
 
-Ch9 Support Vector Machines
+Ch9 Support Vector Machines<br>
   -- Optimal Seperating Hyperplanes <br>
   -- Support Vector Classifier <br>
   -- Feature Expansion and the SVM <br>
 
-Ch10 Unsupervised Learning
+Ch10 Unsupervised Learning <br>
   -- Principal Components <br>
   -- K-means Clustering <br>
   -- Hierarchical Clustering <br>
