@@ -1,5 +1,6 @@
 # Statistical_Learning_Practice
-
+<a href="https://yipeichan.github.io"><b>Link for additional explanations</b></a>
+<br>
 This repository stores code scripts of the homework and learning notes of the course:  "Statistical Learning". Some of the codes are modified from the book: An Introduction to Statistical Learning-- with Application in R.
 
 Ch1 Introduction
