@@ -1,4 +1,4 @@
-# Statistical_Learning_Practice
+# Statistical_Machine_Learning_Practice
 <a href="https://yipeichan.github.io"><b>Link to additional explanations</b></a>
 <br>
 <br>
